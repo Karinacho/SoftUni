@@ -78,7 +78,7 @@ Rounding in “away from zero” style means:
 - To round to the nearest integer, e.g. 2.9  3; -1.75  -2
 - In case the number is exactly in the middle of two integers (midpoint value), round it to the next integer which is away from the 0:
 
-![Not fount](/Programmin%20Fundamentals/Labs%20and%20Exercises/images/away_from_zero.png)
+![Not fount](/Programming%20Fundamentals/Labs%20and%20Exercises/images/away_from_zero.png)
 #### Example
 
 |  Input | Output  |
