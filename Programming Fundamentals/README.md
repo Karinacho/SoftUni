@@ -1,3 +1,6 @@
+ [PROGRAMMING FUNDAMENATLS - JANUARY 2018](https://softuni.bg/trainings/1786/programming-fundamentals-january-2018)
+
+
 The
 **“******Programming
 Fundamentals******”**
