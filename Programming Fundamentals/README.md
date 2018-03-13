@@ -31,4 +31,4 @@ All exercises and exams are automatically evaluated with real-time
 feedback through the [SoftUni
 online judge system](https://judge.softuni.bg/).
 At the end all students take a ****practical
-programming exam******.**
+programming exam**** 
