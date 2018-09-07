@@ -1,0 +1,11 @@
+C:\Users\ko3ebo7e\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\netcoreapp2.0\ConsoleApp4.deps.json
+C:\Users\ko3ebo7e\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\netcoreapp2.0\ConsoleApp4.runtimeconfig.json
+C:\Users\ko3ebo7e\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\netcoreapp2.0\ConsoleApp4.runtimeconfig.dev.json
+C:\Users\ko3ebo7e\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\netcoreapp2.0\ConsoleApp4.dll
+C:\Users\ko3ebo7e\source\repos\ConsoleApp4\ConsoleApp4\bin\Debug\netcoreapp2.0\ConsoleApp4.pdb
+C:\Users\ko3ebo7e\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\netcoreapp2.0\ConsoleApp4.csprojResolveAssemblyReference.cache
+C:\Users\ko3ebo7e\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\netcoreapp2.0\ConsoleApp4.csproj.CoreCompileInputs.cache
+C:\Users\ko3ebo7e\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\netcoreapp2.0\ConsoleApp4.AssemblyInfoInputs.cache
+C:\Users\ko3ebo7e\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\netcoreapp2.0\ConsoleApp4.AssemblyInfo.cs
+C:\Users\ko3ebo7e\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\netcoreapp2.0\ConsoleApp4.dll
+C:\Users\ko3ebo7e\source\repos\ConsoleApp4\ConsoleApp4\obj\Debug\netcoreapp2.0\ConsoleApp4.pdb
