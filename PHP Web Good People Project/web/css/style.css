@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Unicase');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
 /*!
  * bootswatch v3.3.7
  * Homepage: http://bootswatch.com
@@ -13,19 +19,130 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
-body {
-    padding-top: 0;
-    padding-bottom: 20px;
+
+ html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    /*padding-top: 0;*/
+    /*padding-bottom: 20px;*/
+
+}
+.btn1{
+border-radius: 9px;
+    font-size: 150%;
+    color: #ffffdd;
+    font-family: 'Poiret One' ,cursive;
+    padding: 10px 20px;
+    border: solid #ffffff 1px;
+    text-transform: uppercase;
+    text-decoration: #C9C9C9;
+}
+.btn1:hover{
+    color: #0d1318;
+    border:  solid #0d1318 1px;
+}
+.index-p{
+    background-color:#EDC7CF;
+    text-align: center;
+    padding: 50px 0 50px;
+
+}
+.index-p h1{
+    font-family:'Alegreya',serif;
+
+}
+.weLove-p{
+    text-align: center;
+
+}
+.weLove-p h2{
+    font-family:'Alegreya',serif;
+}
+.intro{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background: url(https://images.pexels.com/photos/1372970/pexels-photo-1372970.jpeg) no-repeat 50% 50%;
+    opacity: 0.8;
+    background-size: cover;
+    display: table;
+    top:0;
+    background-attachment: fixed;
+}
+.inner{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
 }
 
+.content1{
+
+max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.content1 h1{
+font-family: 'Raleway',sans-serif;
+    color: #FFFFFF;
+
+    text-shadow: 0px 0px 300px #000;
+
+
+    font-size: 500%;
+
+}
+.content1 h3{
+    font-family: 'Amatic SC' ,cursive;
+    color: #FFFFFF;
+    text-shadow: 30px 30px 30px #000;
+    mix-blend-mode: screen;
+    font-size:250%;
+
+}
+.single-image{
+    transition: 0.5s ease-in-out;
+}
+.single-image1{
+    transition: 0.5s ease-in-out;
+}
+.single-image2{
+    transition: 0.5s ease-in-out;
+}
+.single-image3{
+    transition: 0.5s ease-in-out;
+}
+.items h4{
+    font-family: 'Lobster', cursive;
+}
+
+.items:hover .single-image{
+transform:scale(1.1);
+
+}
+.items:hover .single-image1{
+    transform:scale(1.1);
+}
+.items:hover .single-image2{
+    transform:scale(1.1);
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
+.down img{
+    max-width:100%;
+    max-height:100%;
+    background-attachment: fixed;
+    background-size: cover;
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
+}
+/* Override the default bootstrap behavior where horizontal description lists
+   will truncate terms that are too long to fit in the left column
 */
 .dl-horizontal dt {
     white-space: normal;
@@ -43,6 +160,10 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
 }
 body {
   margin: 0;
@@ -1117,6 +1238,7 @@ body {
   font-size: 15px;
   line-height: 1.42857143;
   color: #2c3e50;
+
   background-color: #ffffff;
 }
 input,
@@ -1128,12 +1250,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #18bc9c;
+  color: #ffffff;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #18bc9c;
+  color: #0d1318;
   text-decoration: underline;
 }
 a:focus {
@@ -4017,14 +4139,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #ecf0f1;
+    background-color: transparent;
 }
 .nav > li.disabled > a {
-  color: #b4bcc2;
+  color: #ffffdd;
 }
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
-  color: #b4bcc2;
+  color: #ffffdd;
   text-decoration: none;
   background-color: transparent;
   cursor: not-allowed;
@@ -4032,8 +4154,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-  background-color: #ecf0f1;
-  border-color: #18bc9c;
+  background-color: #ffffdd;
+  border-color: #F5F5F5;
 }
 .nav .nav-divider {
   height: 1px;
@@ -4530,7 +4652,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #18bc9c;
+  color: #ffffdd;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
@@ -4541,7 +4663,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #18bc9c;
+  color: #ffffdd;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
@@ -4582,7 +4704,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #18bc9c;
+    color: #ffffdd;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
@@ -4664,12 +4786,12 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-  border-color: #149c82;
+  border-color: #ffffdd;
 }
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-  background-color: #15a589;
+  background-color: #ffffdd;
   color: #ffffff;
 }
 @media (max-width: 767px) {
