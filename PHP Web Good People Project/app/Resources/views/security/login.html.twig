@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+
+{% block container %}
+    {% block body %}
+        {% block header %}
+            {{ parent() }}
+        {% endblock %}
+        <section class="intro">
+        <div class="login-box">
+        <h1>Login Here</h1>
+            <form name="authenticate" action="{{ path('security_login') }}" method="post">
+                <p>Username</p>
+                <input type="text" name="_username" placeholder="Enter username"/><br>
+                <p>Password</p>
+                <input type="text" name="_password" placeholder="Enter password"/><br>
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
+                <input type="submit" name="submit" value="Login">
+
+            </form>
+        </div>
+
+
+        </section>
+
+    {% endblock %}
+
+{% endblock %}
+{% block footer %}
+
+{% endblock %}
+

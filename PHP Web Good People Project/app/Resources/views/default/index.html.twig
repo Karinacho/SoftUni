@@ -1,28 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block header %} {% endblock %}
+
 
 {% block container %}
     {% block body %}
-        <nav id="nav" class="navbar navbar-fixed-top" data-spy="affix">
-            <div class="container">
-                <div class="navbar-header">
-
-                    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"> ВХОД &#9679;</a></li>
-
-
-                        <li><a href="#">РЕГИСТРИРАНЕ&#9679;</a></li>
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
+        {% block header %}
+            {{ parent() }}
+        {% endblock %}
         <section class="intro">
 
             <div class="inner">
@@ -33,7 +17,7 @@
                     <h1><b>Good</b> People</h1>
 
                     <br>
-                    <a class="btn1" href="#"><b>Присъедини се</b></a>
+                    <a class="btn1" href="{{ path('security_register') }}"><b>Присъедини се</b></a>
                 </div>
             </div>
         </section>
@@ -43,7 +27,7 @@
             <br>
             <p>Здравей!<br>
                 Добре дошъл на едно различно място, където няма лоши новини.<br>
-            Тук хората си помагат и варват в добротo.<br>
+                Тук хората си помагат и варват в добротo.<br>
                 Ако чувстваш,че пропускаш важните неща в живота <br>
                 погълнат от забързаното ежедневие,<br>
                 ако се чувстваш непълноценен и тъжен,<br>
@@ -64,35 +48,39 @@
                     <br>
                     <div class="items">
 
-                    <div class="col-lg-3 col-md-3">
-                        <img src="{{ asset('imgonline-com-ua-shape-b22dt883Ksa.jpg') }}" width="70%" height="70%" class="single-image">
-                        <h4>Обичаме природата</h4>
+                        <div class="col-lg-3 col-md-3">
+                            <img src="{{ asset('imgonline-com-ua-shape-b22dt883Ksa.jpg') }}" width="70%"
+                                 height="70%" class="single-image">
+                            <h4>Обичаме природата</h4>
+
+                        </div>
 
                     </div>
-
+                    <div class="items">
+                        <div class="col-lg-3 col-md-3">
+                            <img src="{{ asset('imgonline-com-ua-shape-Z0pK6Ke1mOO5e.jpg') }}" width="70%"
+                                 height="70%" class="single-image1">
+                            <h4>Обичаме хората</h4>
+                        </div>
                     </div>
                     <div class="items">
-                    <div class="col-lg-3 col-md-3">
-                        <img src="{{ asset('imgonline-com-ua-shape-Z0pK6Ke1mOO5e.jpg') }}" width="70%" height="70%" class="single-image1">
-                        <h4>Обичаме хората</h4>
-                    </div>
-                    </div>
-                    <div class="items">
-                    <div class="col-lg-3 col-md-3">
-                        <img src="{{ asset('imgonline-com-ua-shape-iITV0Kk5AC.jpg') }}" width="70%" height="70%"class="single-image1">
-                        <h4>Обичаме животните</h4>
-                    </div>
+                        <div class="col-lg-3 col-md-3">
+                            <img src="{{ asset('imgonline-com-ua-shape-iITV0Kk5AC.jpg') }}" width="70%" height="70%"
+                                 class="single-image1">
+                            <h4>Обичаме животните</h4>
+                        </div>
                     </div>
                     <div class="items">
-                    <div class="col-lg-3 col-md-3">
-                        <img src="{{ asset('imgonline-com-ua-shape-gvsvFReo2z.jpg') }}" width="70%" height="70%"class="single-image">
-                        <h4>Обичаме себе си</h4>
-                    </div>
+                        <div class="col-lg-3 col-md-3">
+                            <img src="{{ asset('imgonline-com-ua-shape-gvsvFReo2z.jpg') }}" width="70%" height="70%"
+                                 class="single-image">
+                            <h4>Обичаме себе си</h4>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            </div>
+        </div>
 
         <div class="down">
             <img src="https://images.pexels.com/photos/4827/nature-forest-trees-fog.jpeg">
