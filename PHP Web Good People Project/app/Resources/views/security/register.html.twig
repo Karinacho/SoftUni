@@ -1,2 +1,51 @@
 {% extends 'base.html.twig' %}
 
+{% block container %}
+
+    {% block body %}
+
+        {% block header %}
+            {{ parent() }}
+        {% endblock %}
+        {% for msg in app.session.flashbag.get('info') %}
+            <div  class="alert alert-danger">
+                <p style="text-align: center" >{{ msg }}</p>
+            </div>
+        {% endfor %}
+        {% if errors is defined and errors|length > 0 %}
+
+            {% for error in errors %}
+                <div  class="alert alert-danger">
+
+                    <p>{{ error.message }}</p>
+
+                </div>
+            {% endfor %}
+
+        {% endif %}
+
+        <section class="intro">
+            <div class="register-box">
+                <h1>Register Here</h1>
+                <form name="register" action="{{ path('user_register') }}" method="post">
+                    <p>Username</p>
+                    <input type="text" name="user[username]" placeholder="Enter username"/><br>
+                    <p>Password</p>
+                    <input type="text" name="user[password]" placeholder="Enter password"/><br>
+                    <p>Confirm <i>Password</i></p>
+                    <input type="text" name="confirm_password" placeholder="Enter confirm password"/><br>
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('register') }}"/>
+                    <input type="submit" name="submit" value="Register">
+
+                </form>
+            </div>
+
+
+        </section>
+
+    {% endblock %}
+
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

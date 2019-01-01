@@ -13,8 +13,11 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap-datetimepicker.min.css') }}">
         <link rel="stylesheet" href="{{ asset('bower_components/fakeLoader/demo/css/fakeLoader.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/notify.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}font-awesome.min.css">
+
     {% endblock %}
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico')}}"/>
 </head>
 
 <body id="{% block body_id %}{% endblock %}">
@@ -40,7 +43,7 @@
                             <li><a href="{{ path('security_login') }}"> ВХОД &#9679;</a></li>
 
 
-                            <li><a href="{{ path('security_register') }}">РЕГИСТРИРАНЕ&#9679;</a></li>
+                            <li><a href="{{ path('user_register') }}">РЕГИСТРИРАНЕ&#9679;</a></li>
                         </ul>
 
                     </div>
@@ -74,7 +77,9 @@
     <script src="{{ asset('js/bootstrap-datetimepicker.min.js') }}"></script>
     <script src="{{ asset('bower_components/fakeLoader/fakeLoader.min.js') }}"></script>
 
+
 {% endblock %}
+<script src="{{ asset('js/notify.js') }}"></script>
 <script type="text/javascript">
     $("#fakeLoader").fakeLoader({
         timeToHide:1200, //Time in milliseconds for fakeLoader disappear
@@ -83,6 +88,13 @@
         bgColor:"#FFD6C0" //Hex, RGB or RGBA colors
 
     });
+</script>
+<script>
+    setTimeout(function(){
+        $('.alert-danger').fadeOut();
+    },3000)
+
+
 </script>
 </body>
 </html>

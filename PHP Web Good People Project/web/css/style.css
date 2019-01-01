@@ -60,6 +60,56 @@ border-radius: 9px;
 .weLove-p h2{
     font-family:'Alegreya',serif;
 }
+.register-box{
+    width: 420px;
+    height: 510px;
+    background: rgba(0,0,0,0.5);
+    color: #f7e1b5;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 50px 50px;
+    text-align:center;
+}
+.register-box h1{
+    margin:0;
+    padding: 0 0 10px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+.register-box p{
+    text-align: center;
+    font-size: 150%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+
+}
+.register-box input[type="submit"]{
+    margin-top: 30px;
+    font-size: 20px;
+    color:#6c6159;
+    background-color: #FFEAD0;
+    width:50%;
+}
+.register-box input[type="submit"]:hover{
+    background-color:#EDC7CF;
+    border-bottom: none;
+}
+.register-box input{
+    text-align: center;
+    width: 130%;
+    outline: none;
+    background: #ffffdd ;
+    border: none;
+    border-bottom: 1px solid #fff;
+    height:40px;
+    font-size: 110%;
+
+
+}
 .login-box{
     width: 420px;
     height: 490px;
