@@ -8,15 +8,23 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends Controller
 {
     /**
      * @Route("/login", name="security_login")
      */
-    public function loginAction()
+    public function loginAction(AuthenticationUtils $authenticationUtils)
     {
-        return $this->render('security/login.html.twig');
+
+        $error = $authenticationUtils->getLastAuthenticationError();
+        $lastUsername = $authenticationUtils->getLastUsername();
+        return $this->render('security/login.html.twig', array(
+            'last_username' => $lastUsername,
+            'error'         => $error,
+        ));
+
     }
 
     /**
@@ -24,12 +32,13 @@ class SecurityController extends Controller
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function registerAction(Request $request){
+    public function registerAction(Request $request)
+    {
         $user = new User();
-        $form= $this->createForm(UserType::class,$user);
+        $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
-        if($form->isSubmitted()){
+        if ($form->isSubmitted()) {
 
 
             $validator = $this->get('validator');
@@ -41,22 +50,31 @@ class SecurityController extends Controller
                     'errors' => $errors
                 ));
             }
-            if ($user->getPassword() !== $request->request->get('confirm_password')){
-                $this->addFlash('info','Password mismatch!');
+            if ($user->getPassword() !== $request->request->get('confirm_password')) {
+                $this->addFlash('info', 'Password mismatch!');
                 return $this->render('security/register.html.twig', ['form' => $form->createView()]);
             }
             $password = $this->get('security.password_encoder')
-               ->encodePassword($user,$user->getPassword());
+                ->encodePassword($user, $user->getPassword());
 
-           $user->setPassword($password);
-           $em= $this->getDoctrine()->getManager();
-           $em->persist($user);
-           $em->flush();
+            $user->setPassword($password);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($user);
+            $em->flush();
 
             return $this->redirectToRoute('security_login');
         }
 
         return $this->render('security/register.html.twig');
 
+    }
+
+    /**
+     * @Route("/logout",name="security_logout")
+     * @throws \Exception
+     */
+    public function logout()
+    {
+        throw new \Exception("Logout failed");
     }
 }

@@ -39,11 +39,16 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
+                            {% if app.user %}
+                            <li><a href="{{ path('user_profile') }}">ПРОФИЛ&#9679;</a></li>
+                            <li><a href="{{ path('security_logout') }}"> ИЗХОД &#9679;</a></li>
+                            {% else %}
                             <li><a href="{{ path('homepage') }}">НАЧАЛО&#9679;</a></li>
                             <li><a href="{{ path('security_login') }}"> ВХОД &#9679;</a></li>
 
 
                             <li><a href="{{ path('user_register') }}">РЕГИСТРИРАНЕ&#9679;</a></li>
+                            {% endif %}
                         </ul>
 
                     </div>

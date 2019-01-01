@@ -26,10 +26,10 @@ class User implements UserInterface
      * @var string
      * @Assert\NotNull
      * @Assert\Length(
-     * min = 2,
+     * min = 4,
      * max = 50,
-     * minMessage = "Your first name must be at least  characters long",
-     * maxMessage = "Your first name cannot be longer than  characters"
+     * minMessage = "Your username must be between 4 and 50 characters long",
+     * maxMessage = "Your username must be between 4 and 50 characters long"
      * )
      * @ORM\Column(name="username", type="string", length=255, unique=true)
      */
@@ -38,7 +38,13 @@ class User implements UserInterface
     /**
 
      * @var string
-     *
+     ** @Assert\NotNull
+     * @Assert\Length(
+     * min = 4,
+     * max = 50,
+     * minMessage = "Your password must be between 4 and 50 characters long",
+     * maxMessage = "Your password must be between 4 and 50 characters long"
+     * )
      * @ORM\Column(name="password", type="string", length=255)
      */
     private $password;
@@ -118,7 +124,7 @@ class User implements UserInterface
      */
     public function getRoles()
     {
-        // TODO: Implement getRoles() method.
+        return [];
     }
 
     /**
