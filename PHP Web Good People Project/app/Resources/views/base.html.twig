@@ -40,7 +40,16 @@
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
                             {% if app.user %}
-                            <li><a href="{{ path('user_profile') }}">ПРОФИЛ&#9679;</a></li>
+                                <li><a href="{{ path('homepage') }}">НАЧАЛО&#9679;</a></li>
+
+                                <li><a href="#">GOOD LIFE&#9679;</a>
+                                    <ul>
+                                        <li><a href="#">ДОБАВИ КАУЗА&#9679;</a></li>
+                                    </ul>
+                                </li>
+
+
+                                <li><a href="{{ path('user_profile') }}">ПРОФИЛ&#9679;</a></li>
                             <li><a href="{{ path('security_logout') }}"> ИЗХОД &#9679;</a></li>
                             {% else %}
                             <li><a href="{{ path('homepage') }}">НАЧАЛО&#9679;</a></li>
@@ -85,6 +94,10 @@
 
 {% endblock %}
 <script src="{{ asset('js/notify.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/timeliner.min.js') }}"></script>
+
+<script type="text/javascript" src="inc/colorbox.js"></script>
+
 <script type="text/javascript">
     $("#fakeLoader").fakeLoader({
         timeToHide:1200, //Time in milliseconds for fakeLoader disappear
@@ -97,7 +110,7 @@
 <script>
     setTimeout(function(){
         $('.alert-danger').fadeOut();
-    },3000)
+    },4400)
 
 
 </script>

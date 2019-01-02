@@ -7,10 +7,20 @@
         {% block header %}
             {{ parent() }}
         {% endblock %}
-        <section class="intro">
 
-            <div class="inner">
 
+
+                {% if app.user %}
+                    <section class="intro" style="background:url('https://images.pexels.com/photos/186599/nature-milky-way-stars-sky-186599.jpeg');background-size:cover;
+        opacity: 0.9">
+
+                    <div class="inner">
+                    <p style="text-align: center; font-size: 200%"><a href="#">GOOD LIFE </a>&#9679;<a href="#">GOOD PEOPLE</a></p>
+
+                {% else%}
+                    <section class="intro">
+
+                        <div class="inner">
                 <div class="content1">
                     <h3>От добри хора за добри хора</h3>
                     <hr>
@@ -87,7 +97,7 @@
 
         </div>
 
-
+{% endif %}
 
     {% endblock %}
 

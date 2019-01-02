@@ -25,7 +25,7 @@ security:
             # Reference: http://symfony.com/doc/current/cookbook/security/form_login_setup.html
             form_login:
 
-                default_target_path: user_profile
+                default_target_path: homepage
                 # The route name that the login form submits to
                 check_path: security_login
                 # The name of the route where the login form lives
