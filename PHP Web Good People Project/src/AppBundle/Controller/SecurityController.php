@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Role;
 use AppBundle\Entity\User;
 use AppBundle\Form\UserType;
 use Symfony\Component\HttpFoundation\Response;
@@ -56,6 +57,9 @@ class SecurityController extends Controller
             }
             $password = $this->get('security.password_encoder')
                 ->encodePassword($user, $user->getPassword());
+
+            $role = $this->getDoctrine()->getRepository(Role::class)->findOneBy(['name' => 'ROLE_USER']);
+            $user->setRoles($role);
 
             $user->setPassword($password);
             $em = $this->getDoctrine()->getManager();

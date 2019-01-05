@@ -27,10 +27,12 @@ class User implements UserInterface
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Cause",mappedBy="author")
      *
      */
+
 private $causes;
 public function __construct()
 {
     $this->causes=new ArrayCollection();
+    $this->roles=new ArrayCollection();
 }
 
     /**
@@ -60,6 +62,14 @@ public function __construct()
      */
     private $password;
 
+    /**
+     * @var ArrayCollection
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Role")
+     * @ORM\JoinTable(name="users_roles",
+     *     joinColumns={@ORM\JoinColumn(name="user_id",referencedColumnName="id")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="role_id",referencedColumnName="id")})
+     */
+   private $roles;
 
     /**
      * Get id
@@ -149,11 +159,16 @@ public function __construct()
      * and populated in any number of different ways when the user object
      * is created.
      *
-     * @return (Role|string)[] The user roles
+     * @return array (Role|string)[]
      */
     public function getRoles()
     {
-        return [];
+        $stringRoles=[];
+        foreach ($this->roles as $role){
+            /** @var Role $role */
+            $stringRoles[]=$role->getRole();
+        }
+        return $stringRoles;
     }
 
     /**
@@ -177,6 +192,33 @@ public function __construct()
     public function eraseCredentials()
     {
         // TODO: Implement eraseCredentials() method.
+    }
+
+    /**
+     * @param Role $role
+     * @return User
+     */
+    public function setRoles(Role $role)
+    {
+        $this->roles[] = $role;
+        return $this;
+    }
+
+    /**
+     * @param Cause $cause
+     * @return bool
+     */
+    public function isAuthor(Cause $cause){
+       return $cause->getAuthorId() === $this->getId();
+
+
+    }
+
+    /**
+     * @return bool
+     */
+    public function isAdmin(){
+        return in_array("ROLE_ADMIN",$this->getRoles());
     }
 }
 

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block container %}
+    {% block body %}
+        {% block header %}
+            {{ parent() }}
+        {% endblock %}
+        <section class="intro" style="background:url('https://images.pexels.com/photos/186599/nature-milky-way-stars-sky-186599.jpeg');background-size:cover;
+        opacity: 0.9">
+            <div class="login-box">
+                <h1>EDIT CAUSE</h1>
+                <form action="{{ path('edit_cause',{'id':cause.id}) }}" method="post">
+                    <p>Cause Title</p>
+                    <input type="text" name="cause[title]"  value="{{ cause.title }}"/><br>
+                    <p>Content</p>
+                    <textarea  name="cause[content]" >{{ cause.content }}</textarea><br>
+                    {{ form_row(form._token) }}
+
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <a class="btn btn-default" href="{{ path('people_index') }}">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+
+
+                </form>
+            </div>
+
+
+        </section>
+
+    {% endblock %}
+
+{% endblock %}
+{% block footer %}
+
+{% endblock %}
