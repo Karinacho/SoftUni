@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block container %}
+    {% block body %}
+        {% block header %}
+            {{ parent() }}
+        {% endblock %}
+<section class="intro" style="background:url('https://images.pexels.com/photos/186599/nature-milky-way-stars-sky-186599.jpeg');background-size:cover;
+        opacity: 0.9">
+
+    <div class="inner">
+        <div class="container body-content">
+            <div class="row"style="background: #f9f2f4; padding-bottom: 15px; opacity: 0.6;">
+                {% for cause in causes %}
+                    <div class="col-md-6">
+                        <article>
+                            <header>
+                                <h2>{{ cause.title }}</h2>
+                            </header>
+
+                            <p>
+                                {{ cause.summary }}
+                            </p>
+
+                            <small class="author"style="color: #002a80">
+                                {{ cause.author.username }}
+                            </small>
+
+                            <footer>
+                                <div class="pull-right">
+                                    <a class="btn btn-default btn-xs"
+                                       href="#">Read more &raquo;</a>
+                                </div>
+                            </footer>
+                        </article>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+</section>
+    {% endblock %}
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

@@ -188,6 +188,19 @@ border-radius: 9px;
 
 
 }
+.login-box textarea{
+    text-align: center;
+    width: 130%;
+    outline: none;
+    background: #ffffdd ;
+    border: none;
+    border-bottom: 1px solid #fff;
+    height:60px;
+    font-size: 110%;
+
+
+
+}
 
 .intro{
     height: 100%;

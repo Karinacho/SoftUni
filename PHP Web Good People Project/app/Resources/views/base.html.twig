@@ -42,9 +42,11 @@
                             {% if app.user %}
                                 <li><a href="{{ path('homepage') }}">НАЧАЛО&#9679;</a></li>
 
-                                <li><a href="#">GOOD LIFE&#9679;</a>
+                                <li><a href="#">GOOD PEOPLE&#9679;</a>
                                     <ul>
-                                        <li><a href="#">ДОБАВИ КАУЗА&#9679;</a></li>
+                                        <li><a href="{{ path('create_cause') }}">ДОБАВИ КАУЗА&#9679;</a></li>
+                                        <li><a href="#">ВСИЧКИ КАУЗИ&#9679;</a></li>
+                                        <li><a href="#">МОИТЕ КАУЗИ&#9679;</a></li>
                                     </ul>
                                 </li>
 

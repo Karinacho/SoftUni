@@ -1,6 +1,7 @@
 <?php
 
 namespace AppBundle\Entity;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -21,6 +22,16 @@ class User implements UserInterface
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
+    /**
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Cause",mappedBy="author")
+     *
+     */
+private $causes;
+public function __construct()
+{
+    $this->causes=new ArrayCollection();
+}
 
     /**
      * @var string
@@ -82,6 +93,24 @@ class User implements UserInterface
     public function getUsername()
     {
         return $this->username;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getCauses()
+    {
+        return $this->causes;
+    }
+
+    /**
+     * @param Cause $cause
+     * @return User
+     */
+    public function addCauses($cause)
+    {
+        $this->causes[] = $cause;
+        return $this;
     }
 
     /**
