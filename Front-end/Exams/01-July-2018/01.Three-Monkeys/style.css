@@ -8,14 +8,18 @@ body{
 section{
     background: white;
     width: 70%;
+    /*center the container with margin*/
     margin: 5% auto;
     text-align:center;
     border-radius: 15px;
     box-shadow: 10px 10px 43px 12px rgba(166,156,166,1);
 }
 section article {
-       vertical-align: top;
+    /*make the articles aligned on 1 line */
+    vertical-align: top;
+    /*display tem on 1 line */
     display: inline-block;
+    /*reduce te width, so they can fit ext to each other */
     width:22%;
     margin: 20px 10px;
   
