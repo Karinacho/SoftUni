@@ -1,0 +1,27 @@
+<table>
+    <tbody>
+      <tr><th>Product</th><th>Cost</th></tr>
+      <tr><td>Beer</td>   <td>2.88</td></tr>
+      <tr><td>Fries</td>  <td>2.15</td></tr>
+      <tr><td>Burger</td> <td>4.59</td></tr>
+      <tr><td>Total:</td> <td id="sum"></td></tr>
+    </tbody>
+  </table>
+  <button onclick="sum()">Sum</button>
+<script>
+    function sum(){
+        let tr=[...document.getElementsByTagName("tr")]
+        tr.shift()
+        let sum=0;
+        for(let i in tr){
+            console.log(tr)
+            console.log(i)
+            sum+=Number(tr[i].children[1].innerHTML)
+            if(i==tr.length-1){
+                tr[i].children[1].innerHTML=sum;
+               
+            }
+        }
+ 
+    }
+</script>  
